@@ -22,9 +22,21 @@ public class Book implements Serializable {
         this.quantity = quantity;
     }
 
+    public void decreaseQuantity(int quantity) {
+        if (this.quantity > 0) {
+            this.quantity -= quantity;
+        }
+    }
+
+    public void increaseQuantity(int quantity) {
+        if (this.quantity > 0) {
+            this.quantity += quantity;
+        }
+    }
+
     @Override
     public String toString() {
-        return "title: " + title + ", authorName: "
-                + authorName + ", publishYear: " + publishing + ", quantity: " + quantity +"\n";
+        return "title: " + title + ", author: "
+                + authorName + ", publish: " + publishing + ", quantity: " + quantity +"\n";
     }
 }
