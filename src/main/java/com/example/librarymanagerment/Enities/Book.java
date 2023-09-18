@@ -29,7 +29,7 @@ public class Book implements Serializable {
     }
 
     public void increaseQuantity(int quantity) {
-        if (this.quantity > 0) {
+        if (this.quantity < 1) {
             this.quantity += quantity;
         }
     }

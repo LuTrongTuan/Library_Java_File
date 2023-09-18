@@ -134,7 +134,7 @@ public class BookAppservice {
                 foundBooks.clear();
                 System.out.println("Search by title or author: ");
                 String input = scanner.nextLine().trim();
-
+                scanner.nextLine();
                 // Get list all book to check and add in list =/
                 for (Book book : listBook) {
                     if (book.getTitle().equalsIgnoreCase(input) || book.getAuthorName().equalsIgnoreCase(input)) {
